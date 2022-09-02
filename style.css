@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+    background-color: #100B11;
+}
+
+.content-heading{
+    font-size: 3rem;
+    font-family: 'Press Start 2P', cursive;
+    margin: 15px 0;
+    color: #16a34a;
+    user-select: none;
+}
+.content-heading:hover{
+    color: #16dd5f;
+
+}
