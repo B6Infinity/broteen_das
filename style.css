@@ -7,7 +7,7 @@
     /* background-color: rgba(153, 205, 50, 0.291); */
 }
 html{
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     background-color: #100B11;
 }
 
@@ -86,7 +86,14 @@ html{
 
 }
 
-
+.zoomhover{
+    margin: 20px;
+    transition: 0.15s;
+}
+.zoomhover:hover{
+    /* margin: 0%; */
+    transform: scale(1.05);
+}
 
 
 
