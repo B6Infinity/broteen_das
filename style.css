@@ -7,7 +7,7 @@
     /* background-color: rgba(153, 205, 50, 0.291); */
 }
 html{
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
     background-color: #100B11;
 }
 
