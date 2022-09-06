@@ -21,6 +21,9 @@ html{
 .content-heading:hover{
     color: #16dd5f;
 }
+.funky-h3:hover{
+    color: #1adb61;    
+}
 .funky-h3{
     font-size: 1.5rem;
     font-family: 'Press Start 2P', cursive;
@@ -66,6 +69,19 @@ html{
 .grey{
     color: grey;
 }
+
+.sendmeanemail:hover{
+    background-color: #16a34a;
+    color: #100B11;
+}
+.sendmeanemail{
+
+    flex-grow: 1;
+    font-size: 2rem;
+    user-select: none;
+    padding: 0 30px;
+}
+
 
 /* PHONES */
 @media only screen and (max-width: 720px) {

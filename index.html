@@ -11,7 +11,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 	<link rel="manifest" href="assets/favicon/site.webmanifest">
 
-
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
@@ -44,10 +44,13 @@
           </div>
 		  
         </div>
-      </section>
 
-      <script>
-        var TxtType = function(el, toRotate, period) {
+
+		
+    </section>
+
+	<script>
+		var TxtType = function(el, toRotate, period) {
 		this.toRotate = toRotate;
 		this.el = el;
 		this.loopNum = 0;
@@ -55,179 +58,178 @@
 		this.txt = '';
 		this.tick();
 		this.isDeleting = false;
-    };
+	};
 
-      TxtType.prototype.tick = function() {
-          var i = this.loopNum % this.toRotate.length;
-          var fullTxt = this.toRotate[i];
+	TxtType.prototype.tick = function() {
+		var i = this.loopNum % this.toRotate.length;
+		var fullTxt = this.toRotate[i];
 
-          if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-          } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-          }
+		if (this.isDeleting) {
+		this.txt = fullTxt.substring(0, this.txt.length - 1);
+		} else {
+		this.txt = fullTxt.substring(0, this.txt.length + 1);
+		}
 
-          this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+		this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-          var that = this;
-          var delta = 200 - Math.random() * 100;
+		var that = this;
+		var delta = 200 - Math.random() * 100;
 
-          if (this.isDeleting) { delta /= 2; }
+		if (this.isDeleting) { delta /= 2; }
 
-          if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-          } else if (this.isDeleting && this.txt === '') {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-          }
+		if (!this.isDeleting && this.txt === fullTxt) {
+		delta = this.period;
+		this.isDeleting = true;
+		} else if (this.isDeleting && this.txt === '') {
+		this.isDeleting = false;
+		this.loopNum++;
+		delta = 500;
+		}
 
-          setTimeout(function() {
-          that.tick();
-          }, delta);
-      };
+		setTimeout(function() {
+		that.tick();
+		}, delta);
+	};
 
-      window.onload = function() {
-          var elements = document.getElementsByClassName('typewrite');
-          for (var i=0; i<elements.length; i++) {
-              var toRotate = elements[i].getAttribute('data-type');
-              var period = elements[i].getAttribute('data-period');
-              if (toRotate) {
-                new TxtType(elements[i], JSON.parse(toRotate), period);
-              }
-          }
-          // INJECT CSS
-        //   var css = document.createElement("style");
-        //   css.type = "text/css";
-        //   css.innerHTML = ".typewrite > .wrap { border-right: 0em solid #fff}";
-        //   document.body.appendChild(css);
-      };
-      </script>
+	window.onload = function() {
+		var elements = document.getElementsByClassName('typewrite');
+		for (var i=0; i<elements.length; i++) {
+			var toRotate = elements[i].getAttribute('data-type');
+			var period = elements[i].getAttribute('data-period');
+			if (toRotate) {
+				new TxtType(elements[i], JSON.parse(toRotate), period);
+			}
+		}
+		// INJECT CSS
+		//   var css = document.createElement("style");
+		//   css.type = "text/css";
+		//   css.innerHTML = ".typewrite > .wrap { border-right: 0em solid #fff}";
+		//   document.body.appendChild(css);
+	};
+	</script>
 
 
 	<!-- ABOUT ME -->
-	  <section class="text-gray-400  body-font">
-		<div class="container px-5 py-24 mx-auto flex flex-wrap">
+	<section class="text-gray-400  body-font">
+	<div class="container px-5 py-24 mx-auto flex flex-wrap">
 
-			<h1 class="content-heading" id="aboutme">
-				aboutMe();
-			</h1>
+		<h1 class="content-heading" id="aboutme">
+			aboutMe();
+		</h1>
 
-		  <div class="flex flex-wrap w-full">
-			
-			<div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-								
-				<!-- node -->
-				<div class="flex relative pb-12">
-					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-					</div>
-					<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
-					
-					</div>
-					
+		<div class="flex flex-wrap w-full">
+		
+		<div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+							
+			<!-- node -->
+			<div class="flex relative pb-12">
+				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
 				</div>
-
-
-				<!-- node NAME-->
-				<div class="flex relative pb-12">
-					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-					</div>
-					
-					<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
-					<div class="flex-grow pl-4">
-						<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Name:</h2>
-						<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2">
-							<span class="barcode-font">BROTEEN DAS</span> BROTEEN DAS
-						</h1>
-					</div>
-				</div>
-			
-
-				<!-- node AGE -->
-				<div class="flex relative pb-12">
-					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-					</div>
-					
-					<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
-					<div class="flex-grow pl-4">
-						<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Age:</h2>
-						<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2">
-							<span class="barcode-font" id="b6age_">18</span> <div id="b6age" style="display: inline-block;">18</div>
-
-							<script>
-								let date_1 = new Date('12/17/2003');
-								let date_2 = new Date();
-
-								const days = (date_1, date_2) =>{
-									let difference = date_1.getTime() - date_2.getTime();
-									let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
-									return -TotalDays;
-								}
-								
-								let age = (days(date_1, date_2) / 365);
-
-								age = age.toString(); //If it's not already a String
-								age = age.slice(0, (age.indexOf("."))+4);
-								document.getElementById('b6age_').textContent = age;
-								document.getElementById('b6age').textContent = age;
-							</script>
-						</h1>
-					</div>
-				</div>
-			
-
-				<!-- node SEX -->
-				<div class="flex relative pb-12">
-					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-					</div>
-					
-					<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
-					<div class="flex-grow pl-4">
-						<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Sex:</h2>
-						<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2">
-							<span class="barcode-font">MALE</span> MALE
-						</h1>
-					</div>
-				</div>
-				<!-- node FROM -->
-				<div class="flex relative pb-12">
-					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-					</div>
-					
-					<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
-					<div class="flex-grow pl-4">
-						<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">FROM:</h2>
-						<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2">
-							<span class="barcode-font">INDIA, WEST BENGAL</span> INDIA, <span style="font-size: 15px;"> WEST BENGAL</span>
-						</h1>
-					</div>
-				</div>
-
+				<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
 				
-				
-				<div class="flex relative">
-					<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
-						
-					</div>
-					<div class="flex-grow pl-4">
-					</div>
 				</div>
+				
 			</div>
 
 
-			<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+			<!-- node NAME-->
+			<div class="flex relative pb-12">
+				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+				</div>
+				
+				<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
+				<div class="flex-grow pl-4">
+					<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Name:</h2>
+					<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2">
+						<span class="barcode-font">BROTEEN DAS</span> BROTEEN DAS
+					</h1>
+				</div>
+			</div>
+		
 
-			<lottie-player src="https://lottie.host/8b38a243-d815-4e2d-966b-facfe3a155f6/A5I07Dhotx.json" background="transparent" speed="1" style="width: 50%;" loop autoplay></lottie-player>
+			<!-- node AGE -->
+			<div class="flex relative pb-12">
+				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+				</div>
+				
+				<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
+				<div class="flex-grow pl-4">
+					<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Age:</h2>
+					<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2">
+						<span class="barcode-font" id="b6age_">18</span> <div id="b6age" style="display: inline-block;">18</div>
 
-		  </div>
+						<script>
+							let date_1 = new Date('12/17/2003');
+							let date_2 = new Date();
+
+							const days = (date_1, date_2) =>{
+								let difference = date_1.getTime() - date_2.getTime();
+								let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+								return -TotalDays;
+							}
+							
+							let age = (days(date_1, date_2) / 365);
+
+							age = age.toString(); //If it's not already a String
+							age = age.slice(0, (age.indexOf("."))+4);
+							document.getElementById('b6age_').textContent = age;
+							document.getElementById('b6age').textContent = age;
+						</script>
+					</h1>
+				</div>
+			</div>
+		
+
+			<!-- node SEX -->
+			<div class="flex relative pb-12">
+				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+				</div>
+				
+				<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
+				<div class="flex-grow pl-4">
+					<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Sex:</h2>
+					<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2">
+						<span class="barcode-font">MALE</span> MALE
+					</h1>
+				</div>
+			</div>
+			<!-- node FROM -->
+			<div class="flex relative pb-12">
+				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+				</div>
+				
+				<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
+				<div class="flex-grow pl-4">
+					<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">FROM:</h2>
+					<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2">
+						<span class="barcode-font">INDIA, WEST BENGAL</span> INDIA, <span style="font-size: 15px;"> WEST BENGAL</span>
+					</h1>
+				</div>
+			</div>
+
+			
+			
+			<div class="flex relative">
+				<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+					
+				</div>
+				<div class="flex-grow pl-4">
+				</div>
+			</div>
 		</div>
-	  </section>
+
+
+
+		<lottie-player src="https://lottie.host/8b38a243-d815-4e2d-966b-facfe3a155f6/A5I07Dhotx.json" background="transparent" speed="1" style="width: 50%;" loop autoplay></lottie-player>
+
+		</div>
+	</div>
+	</section>
 
 
 
@@ -245,7 +247,6 @@
 			<div class="p-4 lg:w-1/2">
 			  <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
 
-				<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 				<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_zxau6gfz.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
 
 				<div class="flex-grow sm:pl-8">
@@ -287,10 +288,10 @@
 				</div>
 			  </div>
 			</div>
+
 			<div class="p-4 lg:w-1/2">
 				<div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
 
-					<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 					<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_r6lfrga3.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
 	
 					<div class="flex-grow sm:pl-8">
@@ -314,11 +315,34 @@
 					</div>
 				  </div>
 			</div>
+			
+			<div class="p-4 lg:w-1/2" style="opacity: 0.5;">
+				<div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+
+					<lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_yurog5va.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+	
+					<div class="flex-grow sm:pl-8">
+						
+						<div class="flex justify-between mb-3">
+							<h2 class="title-font font-medium text-lg" style="color: #16a34a;">Web3 + Blockchain</h2>
+							<span class="font-medium text-gray-500 ">Expertise: --/10</span>
+						</div>
+						<div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+							<div class="bg-green-600 h-2.5 rounded-full" style="width: 0%"></div>
+						</div>
+	  
+	
+	
+	
+	
+					  </p>
+					</div>
+				  </div>
+			</div>
 
 			<div class="p-4 lg:w-1/2">
 				<div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
 
-					<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 					<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_zpz526tf.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
 	
 					<div class="flex-grow sm:pl-8">
@@ -341,10 +365,10 @@
 					</div>
 				  </div>
 			</div>
+			
 			<div class="p-4 lg:w-1/2" style="opacity: 0.5;">
 				<div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
 
-					<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 					<lottie-player src="https://lottie.host/425e3f00-e738-4d4e-a2d7-1d846a803359/CfmHmlm7ym.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
 	
 					<div class="flex-grow sm:pl-8">
@@ -367,6 +391,7 @@
 					</div>
 				  </div>
 			</div>
+			
 		</div>
 	</section>
 
@@ -377,10 +402,9 @@
 		hireMe();
 	</h1>
 	<div class="flex-row">
-
+		
 		<div class="lottie" style="width: 50%;">
 
-			<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 			
 			<lottie-player src="https://lottie.host/9cb4f59d-38af-4843-8782-e3f4ae89e9c9/YnZGNlnSSA.json" background="transparent" speed="1" style="width: 100%;" hover></lottie-player>
 		</div>
@@ -430,7 +454,7 @@
 					<div class="p-12 md:w-1/2 flex flex-col items-start">
 						<span class="inline-block py-1 px-2 rounded bg-gray-800 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest"></span>
 						<h2 class="sm:text-3xl text-2xl title-font font-medium text-white mt-4 mb-4">upwork.com</h2>
-						<a href="https://www.upwork.com/freelancers/~01363898580caa1ade"><p class="leading-relaxed mb-8"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Upwork-logo.svg/2560px-Upwork-logo.svg.png" alt=""></p></a>
+						<a href="https://www.upwork.com/workwith/broteendas"><p class="leading-relaxed mb-8"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Upwork-logo.svg/2560px-Upwork-logo.svg.png" alt=""></p></a>
 						<div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-800 border-opacity-75 mt-auto w-full">
 							<a href="https://www.upwork.com/freelancers/~01363898580caa1ade" class="text-green-400 inline-flex items-center">View Profile
 							<svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -449,7 +473,41 @@
 					</div>
 				</div>
 			</div>
+
+						<!-- OR -->
+			<div class="relative">
+
+				<div class="absolute inset-0 flex items-center">
+					<div class="w-full border-b border-gray-300"></div>
+				</div>
+				<div class="relative flex justify-left">
+					<span style="background-color: #100B11;" class=" px-4 text-sm text-gray-500">OR</span>
+				</div>
+			</div>
+			
+
+			<div class="flex-row">
+				<div class="sendmeanemail funky-h3" onclick="
+					player.play();
+					window.location.href = 'mailto:dev.broteendas.official@gmail.com';
+				">
+					Send me an Email <span style="color: #100B11; font-size: 8px;">dev.broteendas.official@gmail.com</span>
+				</div>
+				<div style=" margin-top: -110px;">
+					<lottie-player id="maillottieanimation" src="https://lottie.host/48f12d7a-1216-44e0-940a-730392225562/iw3tBKRIQW.json" background="transparent" speed="1" style="width: 300px; aspect-ratio: 1;;" loop></lottie-player>
+					<script>
+						let player = document.getElementById("maillottieanimation");
+
+					</script>
+				</div>
+				
+				
+			</div>
+
 		</section>
+
+
+		
 	</div>
 
 		
@@ -572,10 +630,9 @@
 
 	<!-- SOCIAL MEDIA -->
 	
-	<!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<!-- 
 	<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_5josuovc.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" hover loop autoplay></lottie-player>
 
-	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_i9arxzcg.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" hover autoplay></lottie-player> -->
 
 
