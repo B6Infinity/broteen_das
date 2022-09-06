@@ -165,6 +165,29 @@ html{
     /*Set to match the Tailwind colour you want the active one to be */
 }
 
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #100b11; 
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #16a34a; 
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0cdc58;
+}
+
+
 #doNotClick{
     user-select: none;
 }
