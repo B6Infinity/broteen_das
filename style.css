@@ -111,8 +111,22 @@ html{
     transform: scale(1.05);
 }
 
+#social{
+    margin: 10px;
+}
+#social div{
+    color: #fff;
+    font-size: 3.5rem;
+    margin: 20px;
+    padding: 10px;
+}
+#social div:hover{
+    color: #16a34a;
 
-
+}
+#social .fa-youtube:hover{
+    text-shadow: 3px 3px 5px #ff000081, -3px -3px 5px #ff000081;
+}
 
 
 /* CAROUSEL */
@@ -149,4 +163,8 @@ html{
   #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
     color: #16a34a;
     /*Set to match the Tailwind colour you want the active one to be */
-  }
+}
+
+#doNotClick{
+    user-select: none;
+}
