@@ -1,6 +1,5 @@
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
             // entry.target.classList.remove('anim-hidden');
             entry.target.classList.add('anim-show');
@@ -14,7 +13,6 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.getElementsByClassName('anim-hidden'); // .anim-show
 // hiddenElements.forEach((el) => observer.observe(el));
-console.log(hiddenElements);
 for(let i = 0; i < hiddenElements.length; i++){
     observer.observe(hiddenElements[i]);
 }
