@@ -102,6 +102,10 @@ html{
         width: 100%;
     }
 
+    .hideinphone{
+        display: none;
+    }
+
 }
 
 .zoomhover{

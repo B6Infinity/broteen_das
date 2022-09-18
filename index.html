@@ -121,119 +121,134 @@
 		</h1>
 
 		<div class="flex flex-wrap w-full">
-		
-		<div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-							
-			<!-- node -->
-			<div class="flex relative pb-12">
-				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-				</div>
-				<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
-				
-				</div>
-				
-			</div>
-
-
-			<!-- node NAME-->
-			<div class="flex relative pb-12">
-				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-				</div>
-				
-				<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
-				<div class="flex-grow pl-4">
-					<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Name:</h2>
-					<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2 flylink-aboutnode anim-hidden">
-						<span class="barcode-font">BROTEEN DAS</span> BROTEEN DAS
-					</h1>
-				</div>
-			</div>
-		
-
-			<!-- node AGE -->
-			<div class="flex relative pb-12">
-				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-				</div>
-				
-				<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
-				<div class="flex-grow pl-4">
-					<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Age:</h2>
-					<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2 flylink-aboutnode anim-hidden">
-						<span class="barcode-font" id="b6age_">18</span> <div id="b6age" style="display: inline-block;">18</div>
-
-						<script>
-							let date_1 = new Date('12/17/2003');
-							let date_2 = new Date();
-
-							const days = (date_1, date_2) =>{
-								let difference = date_1.getTime() - date_2.getTime();
-								let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
-								return -TotalDays;
-							}
-							
-							let age = (days(date_1, date_2) / 365);
-
-							age = age.toString(); //If it's not already a String
-							age = age.slice(0, (age.indexOf("."))+4);
-							document.getElementById('b6age_').textContent = age;
-							document.getElementById('b6age').textContent = age;
-						</script>
-					</h1>
-				</div>
-			</div>
-		
-
-			<!-- node SEX -->
-			<div class="flex relative pb-12">
-				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-				</div>
-				
-				<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
-				<div class="flex-grow pl-4">
-					<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Sex:</h2>
-					<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2 flylink-aboutnode anim-hidden">
-						<span class="barcode-font">MALE</span> MALE
-					</h1>
-				</div>
-			</div>
-
-			<!-- node FROM -->
-			<div class="flex relative pb-12">
-				<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-				<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
-				</div>
-				
-				<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
-				<div class="flex-grow pl-4">
-					<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">FROM:</h2>
-					<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2 flylink-aboutnode anim-hidden">
-						<span class="barcode-font">INDIA, WEST BENGAL</span> INDIA, <span style="font-size: 15px;"> WEST BENGAL</span>
-					</h1>
-				</div>
-			</div>
-
 			
-			
-			<div class="flex relative">
-				<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+			<div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+								
+				<!-- node -->
+				<div class="flex relative pb-12">
+					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+					</div>
+					<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+					
+					</div>
 					
 				</div>
-				<div class="flex-grow pl-4">
+
+
+				<!-- node NAME-->
+				<div class="flex relative pb-12">
+					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+					</div>
+					
+					<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
+					<div class="flex-grow pl-4">
+						<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Name:</h2>
+						<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2 flylink-aboutnode anim-hidden">
+							<span class="barcode-font">BROTEEN DAS</span> BROTEEN DAS
+						</h1>
+					</div>
+				</div>
+			
+
+				<!-- node AGE -->
+				<div class="flex relative pb-12">
+					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+					</div>
+					
+					<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
+					<div class="flex-grow pl-4">
+						<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Age:</h2>
+						<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2 flylink-aboutnode anim-hidden">
+							<span class="barcode-font" id="b6age_">18</span> <div id="b6age" style="display: inline-block;">18</div>
+
+							<script>
+								let date_1 = new Date('12/17/2003');
+								let date_2 = new Date();
+
+								const days = (date_1, date_2) =>{
+									let difference = date_1.getTime() - date_2.getTime();
+									let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+									return -TotalDays;
+								}
+								
+								let age = (days(date_1, date_2) / 365);
+
+								age = age.toString(); //If it's not already a String
+								age = age.slice(0, (age.indexOf("."))+4);
+								document.getElementById('b6age_').textContent = age;
+								document.getElementById('b6age').textContent = age;
+							</script>
+						</h1>
+					</div>
+				</div>
+			
+
+				<!-- node SEX -->
+				<div class="flex relative pb-12">
+					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+					</div>
+					
+					<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
+					<div class="flex-grow pl-4">
+						<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">Sex:</h2>
+						<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2 flylink-aboutnode anim-hidden">
+							<span class="barcode-font">MALE</span> MALE
+						</h1>
+					</div>
+				</div>
+
+				<!-- node FROM -->
+				<div class="flex relative pb-12">
+					<div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+					<div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+					</div>
+					
+					<div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10"></div>
+					<div class="flex-grow pl-4">
+						<h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider text-green-500 funky-h3">FROM:</h2>
+						<h1 class="sm:text-3xl text-2xl  font-medium title-font mb-2 flylink-aboutnode anim-hidden">
+							<span class="barcode-font">INDIA, WEST BENGAL</span> INDIA, <span style="font-size: 15px;"> WEST BENGAL</span>
+						</h1>
+					</div>
+				</div>
+
+				
+				
+				<div class="flex relative">
+					<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+						
+					</div>
+					<div class="flex-grow pl-4">
+					</div>
 				</div>
 			</div>
-		</div>
 
 
 
-		<lottie-player src="https://lottie.host/8b38a243-d815-4e2d-966b-facfe3a155f6/A5I07Dhotx.json" background="transparent" speed="1" style="width: 50%;" loop autoplay></lottie-player>
+			<lottie-player class="hideinphone" src="https://lottie.host/8b38a243-d815-4e2d-966b-facfe3a155f6/A5I07Dhotx.json" background="transparent" speed="1" style="width: 50%;" loop autoplay></lottie-player>
 
 		</div>
 	</div>
 	</section>
+
+
+
+	<!-- ACHIEVEMENTS -->
+	<!-- <div class="container px-5 py-24 mx-auto flex-row">
+
+		<h1 class="content-heading" id="aboutme">
+			achievements();
+		</h1>
+
+		<div class="flex flex-wrap w-full" style="background-color: #16a34a; position: relative; height: 400px;">
+			
+			
+		</div>
+	</div> -->
 
 
 
