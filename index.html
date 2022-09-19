@@ -244,7 +244,7 @@
 
 
 	<!-- ACHIEVEMENTS -->
-	<!-- <div class="container px-5 py-24 mx-auto flex-row">
+	<div class="container px-5 py-24 mx-auto flex-row anim-hidden">
 
 		<h1 class="content-heading" id="aboutme">
 			achievements(
@@ -252,8 +252,8 @@
 
 		<div class="flex flex-wrap w-full achievements-holder">
 
-			<div class="funky-h3 achievements-arrow" id="UP-ACH" onclick="scrollAcievements('U');">></div>
-			<div class="funky-h3 achievements-arrow" id="DOWN-ACH" onclick="scrollAcievements('D');" style="bottom: 0%;"><</div>
+			<div class="funky-h3 achievements-arrow" id="UP-ACH" onclick="scrollAcievements('D');">></div>
+			<div class="funky-h3 achievements-arrow" id="DOWN-ACH" onclick="scrollAcievements('U');" style="bottom: 0%;"><</div>
 			
 			<section class="flex-row achievement" id="JEE">
 				
@@ -281,7 +281,7 @@
 				</h1>
 			</section>
 
-			<section class="flex-row achievement" id="WBJEE">
+			<section class="flex-row achievement" id="CUET">
 				
 				<div>
 					<img src="https://img.collegepravesh.com/2015/09/NTA-Logo.png" style="aspect-ratio: 1; width: 100px;" alt="">
@@ -289,8 +289,10 @@
 						CUET 2022
 					</h1>
 				</div>
-				<h1 class="funky-h3 data">
-					98.2 Percentile
+				<h1 class="funky-h3 data" style="font-size: 20px;">
+					98.6 %tile - Physics <br>
+					97 %tile - Maths <br>
+					93.3 %tile - Chemistry
 				</h1>
 			</section>
 
@@ -302,6 +304,12 @@
 		</h1>
 
 		<style>
+			#UP-ACH{
+				visibility: visible;
+			}
+			#UP-ACH{
+				visibility: hidden;
+			}
 			.achievement{
 				height: 400px;
 				transition: 0.2s;
@@ -315,6 +323,7 @@
 				padding: 50px 10px; 
 				margin: 5px;
 				overflow-y: hidden;
+				z-index: 3;
 			}
 			.achievements-holder section div{
 				display: flex; flex-direction: column; flex-grow: 1;
@@ -337,6 +346,7 @@
 				position: absolute;
 				left: 50%;
 				transform: rotate(-90deg);
+				z-index: 10;
 			}
 
 		</style>
@@ -345,11 +355,14 @@
 			
 			let viewEl = 1;
 			let posY = 0;
+			let noOfEls = Array.from(achievements).length;
 
 			function scrollAcievements(direction){
 
 				if (direction == 'D' && viewEl == 1) {
-					
+					return null;
+				}else if (direction == 'U' && viewEl == noOfEls) {
+					return null;					
 				}
 
 				console.log('ENT');
@@ -367,13 +380,24 @@
 				(Array.from(achievements)).forEach(element => {
 					element.style.transform = `translateY(${posY}px)`;
 				});
+
+				// ARROWS SHOW
+				if (viewEl == noOfEls) { // LAST ELEMENT
+					document.getElementById('DOWN-ACH').style.visibility = 'hidden';
+				}else if (viewEl == 1) {
+					document.getElementById('UP-ACH').style.visibility = 'hidden';
+				}else{
+					document.getElementById('UP-ACH').style.visibility = 'visible';
+					document.getElementById('DOWN-ACH').style.visibility = 'visible';
+
+				}
 				console.log('EX');
 			}
 
 		</script>
 	</div>
 
- -->
+
 
 
 	
