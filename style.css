@@ -200,7 +200,14 @@ html{
 
 
 
+.clear-blur-onfocus{
+    filter: blur(5px);
+    transition: 0.2s;
+}
+.clear-blur-onfocus:hover{
+    filter: blur(0px);
 
+}
 
 /* SCROLL ANIMATION */
 
