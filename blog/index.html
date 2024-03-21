@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Techie Blog Title</title>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Lottie Player -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <script src="https://kit.fontawesome.com/b2370eb060.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="/../style.css"> <!-- My CSS -->
+    <link rel="stylesheet" href="/../blogstyle.css"> <!-- My CSS -->
+    <link rel="stylesheet" href="/../glitchtext.css"> <!-- My CSS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> <!-- Supabase JS -->
+    <script defer type="module" src="dbdriver.js"></script> <!-- My JS -->
+
+</head>
+
+<body>
+    <header class="text-gray-400 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center flex-row">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" style="flex-grow: 1;">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg> -->
+                <span class="ml-3 text-xl" style="color: #f700ff;">B</span>roteen Das'
+                <span class="ml-3 text-xl" style="color: #16a34a;">B</span>log
+            </a>
+
+            <a href="/../">
+                <button
+                    class="inline-flex items-center border-0 py-3 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Head
+                    to
+                    Site
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </a>
+
+        </div>
+    </header>
+
+    <div id="tweetList" class="feed-view">
+
+
+        <div id="feed_progress_indicator" class="progress-indicator"></div>
+
+
+        <!-- <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-info">
+                </div>
+            </div>
+            <div class="tweet-content">
+                <h3 class="tweet-heading">${tweet.heading}</h3>
+                <p class="tweet-text">${tweet.content.body}</p>
+            </div>
+            <div class="tweet-footer">
+                <div class="tweet-actions" onmouseover="console.log(5)">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-retweet"></i>
+                    <i class="fas fa-share"></i>
+
+                    <h2 class="glitch layers showwhenhover" data-text="ケーキは嘘です"><span>ケーキは嘘です</span></h2>
+                </div>
+
+                <div class="tweet-date-created"><hr>${tweet.created_at}</div>
+                
+            </div>
+        </div> -->
+
+
+    </div>
+</body>
+
+</html>
